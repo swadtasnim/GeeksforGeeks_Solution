@@ -1,0 +1,38 @@
+Problem Link: [http://www.practice.geeksforgeeks.org/problem-page.php?pid=1217]
+
+#include<bits/stdc++.h>
+#define ll    long long int
+using namespace std;
+ll f[10000],n,m,o;
+vector<ll>pr;
+map<ll,ll>p;
+int main()
+{
+     n=m=1;
+     p[1]=1;
+     for(ll i=1; i<=100; i++)
+            {
+                  p[n+m]=1;
+                  o=m;
+                  m=n+m;
+                  n=o;
+
+            }
+
+     for(int i=1; i<=130000; i++)
+                  if(!p[i])
+                  pr.push_back(i);
+                  
+
+     ll u,b;
+     cin>>b;
+     while(b--)
+      {      cin>>u;
+                cout<<pr[u-1]<<endl;}
+
+
+
+
+}
+
+
